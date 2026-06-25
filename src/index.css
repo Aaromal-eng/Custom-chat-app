@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #0a0a0f;
+    color: #f0f0f8;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #2a2a35; border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: #7c6aff; }
+  * { scrollbar-width: thin; scrollbar-color: #2a2a35 transparent; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-glow text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 shadow-glow-sm hover:shadow-glow flex items-center gap-2 justify-center text-sm;
+  }
+  .btn-ghost {
+    @apply bg-elevated hover:bg-border text-text-secondary hover:text-text-primary font-medium px-4 py-2 rounded-xl transition-all duration-200 flex items-center gap-2 text-sm;
+  }
+  .input-field {
+    @apply bg-elevated border border-border focus:border-accent rounded-xl px-4 py-2.5 text-sm text-text-primary placeholder-text-dim outline-none transition-all duration-200 w-full;
+  }
+  .message-bubble-mine {
+    @apply bg-accent text-white rounded-2xl rounded-br-sm px-4 py-2.5 max-w-xs md:max-w-md lg:max-w-lg shadow-glow-sm;
+  }
+  .message-bubble-theirs {
+    @apply bg-elevated border border-border text-text-primary rounded-2xl rounded-bl-sm px-4 py-2.5 max-w-xs md:max-w-md lg:max-w-lg;
+  }
+  .sidebar-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl cursor-pointer transition-all duration-150 hover:bg-elevated group;
+  }
+  .sidebar-item.active {
+    @apply bg-elevated border border-border;
+  }
+}
