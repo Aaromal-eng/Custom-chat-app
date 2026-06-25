@@ -11,7 +11,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",
     "lucide-react": "^0.474.0",
-    "scaledrone-js": "^4.1.0"
+    "scaledrone": "^4.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
